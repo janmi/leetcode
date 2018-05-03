@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-05-03 10:04:57
 * @Last Modified by:   Administrator
-* @Last Modified time: 2018-05-03 10:39:13
+* @Last Modified time: 2018-05-03 10:46:22
 */
 /*
 题：
@@ -41,7 +41,8 @@ var maxAreaOfIsland = function(grid) {
   }
   return maxArea
 };
-
+// 对于是否是岛屿不需要过多的去考虑水平或垂直方向是否都是1，只要当前项为1，则假设他为岛屿，并且递归计算相邻项是否为1即可；累加并返回岛屿的面积。
+// 通过 max 比较获得最大岛屿
 var AreaOfIsland = function (grid, i, j) {
   if (i >= 0 && i < grid.length && j >= 0 && grid[0].length && grid[i][j] == 1) {
     // 重置当前项为0，是为了不在重复计算当前项的值
