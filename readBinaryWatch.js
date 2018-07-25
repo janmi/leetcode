@@ -54,7 +54,7 @@ var readBinaryWatch = function(num) {
 	return result
 };
 
-console.dir(readBinaryWatch(4).length)
+console.dir(readBinaryWatch(3))
 
 
 
