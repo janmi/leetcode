@@ -3,7 +3,6 @@
  * @return {number}
  */
 var firstUniqChar = function(s) {
-  let len = s.length
   let copyStr = s
   let result = -1
   function find () {
@@ -19,8 +18,6 @@ var firstUniqChar = function(s) {
   find()
   return result
 }
-
-
 
 console.time('time:')
 console.log(firstUniqChar(""))
