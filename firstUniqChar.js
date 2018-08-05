@@ -2,6 +2,10 @@
  * @param {string} s
  * @return {number}
  */
+ /*
+  解体分析：
+  1、 使用正则匹配单个字符，match 方法返回的数组超过 1，即返回该字符的索引
+ */
 var firstUniqChar = function(s) {
   let copyStr = s
   let result = -1

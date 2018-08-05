@@ -2,6 +2,13 @@
  * @param {string} s
  * @return {string}
  */
+
+ /*
+ 解体分析：
+ 1、获取字符集的每一项生成一个正则（全局匹配），使用 match 方法，提取到相同的字符，并且组合成一个字符，将该字符在原字符集的所有字符都替换为空
+ 2、将新组合的字符进行降序排列
+ 3、需要考虑特殊情况转移 . 和 \
+ */
 var frequencySort = function(s) {
   const result = []
   function loop () {

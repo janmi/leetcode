@@ -3,7 +3,12 @@
  * @param {number} k
  * @return {number[]}
  */
-
+/*
+解体分析：
+1、遍历数组，生成 键：数字出现次数的对象集
+2、对象集进行降序排列
+3、循环 k 次，奖满足条件的项 push 入数组中，并返回
+*/
 var topKFrequent = function (nums, k) {
 	const numsSet = {}
 	let result = []
@@ -18,7 +23,6 @@ var topKFrequent = function (nums, k) {
 	for (var i = 0; i < k; i++) {
 		ret.push(Number(result[i][0]))
 	}
-	console.log(result)
 	return ret
 }
 
