@@ -2,6 +2,10 @@
  * @param {number} num
  * @return {number}
  */
+
+ /*
+ 	解析： 正数的2补数为其反数，如： 5的二进制位 101，反数位 010，则其补数也位 010， 转为10进制则为 2
+ */
 var findComplement = function(num) {
   let result = ''
   num = parseInt(num, 10).toString(2)
