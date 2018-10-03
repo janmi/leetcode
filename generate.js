@@ -28,4 +28,4 @@ var generate = function(numRows) {
   return reslut
 }
 
-console.log(generate(5))
+console.log(generate(9))
