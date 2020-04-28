@@ -31,4 +31,5 @@ var majorityElement = function(nums) {
     return nums[mode]
 };
 
+
 console.log(majorityElement([10,9,9]))

@@ -35,13 +35,27 @@ var twoSum = function(nums, target) {
 // 第二种解法，目标值减去当前项，得到另一组合项的值，通过 Array.indexOf()方法获取其索引，算法复杂度为 On
 
 var twoSum = function(nums, target) {
- var result = []
  for (var i = 0; i < nums.length; i++) {
     var complement = target - nums[i]
     var j = nums.indexOf(complement) 
     if (j > -1 && j !== i) {
-      return result = [i, j]
+      return [i+1, j+1]
     }
  }
- return result
+ return []
+};
+
+/*
+一个left指针，一个right指针， 如果left + right 值 大于target 则 right左移动， 否则left右移。
+ */
+var twoSum = function(numbers, target) {
+    const visited = {} // 记录出现的数字， 空间复杂度N
+    for (let index = 0; index < numbers.length; index++) {
+        const element = numbers[index];
+        if (visited[target - element] !== void 0) {
+            return [visited[target - element], index + 1]
+        }
+        visited[element] = index + 1;
+    }
+    return [];
 };
