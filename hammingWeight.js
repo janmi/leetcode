@@ -13,4 +13,9 @@ var hammingWeight = function(n) {
   return len
 };
 
+var hammingWeight = function(n) {
+  return parseInt(n, 10).toString(2).replace(/[0]*/g, '').length
+};
+
+
 console.log(hammingWeight(1))
