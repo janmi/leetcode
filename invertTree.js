@@ -23,7 +23,9 @@ var tree = {
     right: { val: 9, left: null, right: null }
   }
 }
-
+/*
+如果树比较长建议使用 stack
+ */
 var invertTree = function(root) {
 	if (root) {
 		[root.left, root.right] = [root.right, root.left]
