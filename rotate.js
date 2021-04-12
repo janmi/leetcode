@@ -18,4 +18,14 @@ var rotate = function(nums, k) {
   return nums
 };
 
-console.log(rotate([1,2,3,4,5,6,7], 10))
+var rotate = function(nums, k) {
+	if (k <= nums.length) {
+		nums.unshift(...nums.splice(-k))
+	} else {
+		const mold = k % nums.length
+		nums.unshift(...nums.splice(-mold))
+	}
+	return nums
+}
+
+console.log(rotate([1,2,3,4,5,6], 11))
