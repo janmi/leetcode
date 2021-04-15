@@ -17,4 +17,19 @@ var moveZeroes = function(nums) {
 	return nums;
 };
 
-console.log(moveZeroes([0,1,0,3,12]))
+var moveZeroes = function(nums) {
+   let len = nums.length;
+   let i = 0;
+   while (len > 0) {
+       if (nums[i] === 0) {
+           nums.splice(i, 1);
+           nums[nums.length] = 0;
+       } else {
+           i++;
+       }
+       len--;
+   }
+   return nums;
+}
+
+console.log(moveZeroes([1,0,0,0,0,0]))
