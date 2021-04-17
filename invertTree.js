@@ -24,7 +24,9 @@ var tree = {
   }
 }
 /*
-如果树比较长建议使用 stack
+
+  默认有序二叉树的右子树是大于左子树的，翻转二叉树既左子树大于右子树
+  如果树比较长建议使用 stack
  */
 var invertTree = function(root) {
 	if (root) {
