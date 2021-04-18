@@ -42,7 +42,6 @@ var serialize = function(root) {
  */
 var deserialize = function(data) {
     data = data.split(',');
-    console.log(data);
 
     const helper = (data) => {
       // 递归终止条件
