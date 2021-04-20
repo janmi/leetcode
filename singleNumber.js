@@ -3,27 +3,12 @@
  * @return {number}
  */
 var singleNumber = function(nums) {
-  let strs = nums.join('|')
-  for (var i = 0; i < nums.length; i++) {
-  	if (strs.match(new RegExp(nums[i], 'g')).length === 1) {
-  		return nums[i]
-  	}
+  for(let i = 0; i < nums.length; i++) {
+    if(nums.indexOf(nums[i]) === nums.lastIndexOf(nums[i])) {
+      return nums[i]
+    }
   }
-}
-
-
-var singleNumber = function(nums) {
-	while(nums.length) {
-		let item = nums.pop();
-		let index = nums.indexOf(item);
-		if(index === -1) {
-			return item;
-			break;
-		} else {
-			nums.splice(index, 1);
-		}
-	}
-}
+};
 
 /*
 	关键点
