@@ -4,6 +4,7 @@
  */
 var singleNumber = function(nums) {
   for(let i = 0; i < nums.length; i++) {
+  	// 只有一位的话，name indexOf 和 lastIndexOf 返回的值是一样的
     if(nums.indexOf(nums[i]) === nums.lastIndexOf(nums[i])) {
       return nums[i]
     }
