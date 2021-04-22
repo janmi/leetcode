@@ -24,11 +24,11 @@ Output: 2
 
  */
 var majorityElement = function(nums) {
-    nums.sort((a, b) => {
-    	return a - b
-    })
-    let mode = Math.floor(nums.length / 2)
-    return nums[mode]
+  nums.sort((a, b) => {
+  	return a - b
+  })
+  let mode = Math.floor(nums.length / 2)
+  return nums[mode]
 };
 
 

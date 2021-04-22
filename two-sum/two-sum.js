@@ -49,13 +49,13 @@ var twoSum = function(nums, target) {
 一个left指针，一个right指针， 如果left + right 值 大于target 则 right左移动， 否则left右移。
  */
 var twoSum = function(numbers, target) {
-    const visited = {} // 记录出现的数字， 空间复杂度N
-    for (let index = 0; index < numbers.length; index++) {
-        const element = numbers[index];
-        if (visited[target - element] !== void 0) {
-            return [visited[target - element], index + 1]
-        }
-        visited[element] = index + 1;
-    }
-    return [];
+  const visited = {} // 记录出现的数字， 空间复杂度N
+  for (let index = 0; index < numbers.length; index++) {
+      const element = numbers[index];
+      if (visited[target - element] !== void 0) {
+          return [visited[target - element], index + 1]
+      }
+      visited[element] = index + 1;
+  }
+  return [];
 };
