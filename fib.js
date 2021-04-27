@@ -20,7 +20,7 @@ var fib = function(n) {
   return n1;
 };
 
-// 遍历， 比 dp 块点
+// 遍历， 比 dp 快点
 var fib = function(n) {
   let res = [0, 1];
   for(let i = 1; i <= 100; i++){
