@@ -65,3 +65,44 @@ var romanToInt = function (s) {
 
   return result
 }
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var romanToInt = function(s) {
+  const list = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000,
+    IV: 4,
+    IX: 9,
+    XL: 40,
+    XC: 90,
+    CD: 400,
+    CM: 900
+  }
+  if(list[s]) return list[s];
+  let endIndex = 2;
+  let start = 0;
+  let curItem = s.slice(start, endIndex);
+  let res = 0;
+  while(curItem !== '') {
+    if(list[curItem]) {
+      res += list[curItem]
+      start = endIndex
+      endIndex = endIndex + 2
+    } else {
+      curItem = s.slice(start, endIndex-1);
+      res += list[curItem]
+      start = endIndex - 1
+      endIndex = endIndex + 1
+    }
+    curItem = s.slice(start, endIndex)
+  }
+  return res
+};
